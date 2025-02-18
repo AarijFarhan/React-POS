@@ -46,7 +46,7 @@ const cards = [
 ]
 export function CardWithForm() {
   return (
-    <div className=" grid grid-rows-2 sm:grid-rows-6 md:grid-rows-3 lg:grid-rows-2 grid-flow-col justify-around  p-10 w-screen ">
+    <div className=" grid grid-rows-6 sm:grid-rows-6 md:grid-rows-3 lg:grid-rows-2 grid-flow-col justify-around  p-10 w-full ">
           {cards.map((element) => (
     <Card className="w-[350px] bg-white  text-slate-900 mb-4 rounded-2xl transition duration-700 ease-in-out hover:bg-green-200 transform hover:-translate-y-1 hover:scale-110 hover:border-green-200">
 
@@ -59,7 +59,7 @@ export function CardWithForm() {
       </CardHeader>
     
       <CardFooter className="flex justify-between">
-        <Button variant="outline" className="bg-green-500">ADD TO CART</Button>
+        <Button variant="outline" className="bg-green-500 rounded-2xl border-green-500  ">ADD TO CART</Button>
         <Button>BUY NOW</Button>
       </CardFooter>
     </Card>
