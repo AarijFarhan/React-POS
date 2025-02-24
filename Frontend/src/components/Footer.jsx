@@ -22,17 +22,17 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-white">
-                Services
+              <a href="/menu" className="hover:text-white">
+                Menu
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-white">
-                Portfolio
+              <a href="/cart" className="hover:text-white">
+                Cart
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-white">
+              <a href="/contact" className="hover:text-white">
                 Contact
               </a>
             </li>
@@ -70,8 +70,8 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
           <ul className="text-sm text-gray-400 space-y-2">
-            <li>Email: info@example.com</li>
-            <li>Phone: +1 234 567 890</li>
+            <li>Email: pos@gmail.com</li>
+            <li>Phone: +92 XXX XXX XXXX</li>
             <li className="flex space-x-4 mt-4">
               <a href="#" className="hover:text-white">
                 <i className="fab fa-facebook-f"></i> Facebook
@@ -88,7 +88,7 @@ const Footer = () => {
       </div>
       <div className="mt-10">
       <p className="text-center text-gray-400 mt-10 ">
-        &copy; {new Date().getFullYear()} Your Website. All rights reserved.
+        &copy; {new Date().getFullYear()} POS . All rights reserved.
       </p>
       </div>
     </footer>
