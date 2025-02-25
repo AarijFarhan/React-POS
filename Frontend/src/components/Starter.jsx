@@ -3,11 +3,12 @@ import {
     Card,
    
   } from "@/components/ui/card"
-  import { Switch } from "@/components/ui/switch"
 
 
+  import { Button } from "@/components/ui/button"
 
-
+  import {NavLink} from 'react-router-dom'
+  
 function Starter() {
     const sta_data = [
         {
@@ -47,24 +48,30 @@ function Starter() {
             price:"$2"
         }
     ]
+   
   return (
     <>
-<Switch id="airplane-mode" className="bg-white" />
 
+    <h1 >STARTER</h1>
     <div className='grid  grid-rows-3 sm:grid-rows-6 sm:grid-flow-col  md:grid-rows-6 lg:grid-rows-3 xl:grid-rows-3  w-full '>
         {sta_data.map((input) => (
-<Card className='grid   grid-flow-col justify-between  rounded-xl m-5 border-0 p-4 ' key={input.title} > 
-   <div className='flex flex-row sm:flex-flow-col '>
-
-        <img src={input.images} className='size-fit rounded-full'/> 
-        <div className='ml-4' >
-        <h1>{input.title}</h1>
-    <p className='text-slate-700 text-lg '>{input.description}</p>
-        </div>
-   </div>
-   <h5 className='text-rose-500'>{input.price}</h5>
-
-</Card>
+    <Card className='flex flex-col  xl:flex-row lg:flex-row md:flex-row justify-center xl:justify-between lg:justify-between md:justify-between rounded-xl m-5 border-0 p-4 ' key={input.title} > 
+       <div className='flex flex-col xl:flex-row lg:flex-row md:flex-row  items-center xl:items-start  '>
+    
+            <img src={input.images} className='size-fit rounded-full'/> 
+            <div className='ml-4' >
+            <h1 className='text-lg lg:text-2xl xl:text-2xl xl:text-start lg:text-start md:text-start text-center'>{input.title}</h1>
+        <p className='text-slate-700 text-sm lg:text-lg xl:text-lg xl:text-start lg-text-start md:text-start text-center '>{input.description}</p>
+            </div>
+       </div>
+       <div className='flex flex-col xl:flex-row lg:flex-row md:flex-row items-center xl:items-between lg:items-between md:items-between justify-center xl:justify-between lg:justify-between md:justify-between '>
+       <NavLink to="/cart">
+          <Button  variant="outline" className="bg-green-500 rounded-2xl border-green-500 text-xs lg:text-sm md:text-sm xl:text-sm size-auto"    >ADD TO CART</Button>
+          </NavLink>
+          
+          <h5 className='text-lg lg:text-2xl xl:text-2xl text-rose-500 w-5  ml-0 xl:ml-3 md:ml-3 lg:ml-3 m'>{input.price}</h5>
+          </div>
+    </Card>
 ))
 }
 
@@ -72,5 +79,5 @@ function Starter() {
    </>
   )
 }
-
+ 
 export default Starter

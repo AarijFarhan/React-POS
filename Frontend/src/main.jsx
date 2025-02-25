@@ -8,6 +8,7 @@ import { createBrowserRouter , RouterProvider } from'react-router-dom'
 import Home from './pages/Home'
 import Menu from './pages/Menu'
 import Cart from './pages/Cart'
+import Contact from './pages/Contact'
 
 
 
@@ -20,6 +21,7 @@ const router =createBrowserRouter(
       <Route path="/home" element={<Home/>} />
       <Route path="/menu" element={<Menu />} />
       <Route path="/cart" element={<Cart />} />
+      <Route path="/contact" element={<Contact />} />
      
     
 

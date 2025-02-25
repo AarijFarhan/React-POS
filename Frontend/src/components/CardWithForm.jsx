@@ -9,6 +9,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+
+import {Link , NavLink} from 'react-router-dom'
 // import { Input } from "@/components/ui/input"
 // import { Label } from "@/components/ui/label"
 // import {
@@ -46,21 +48,20 @@ const cards = [
 ]
 export function CardWithForm() {
   return (
-    <div className=" grid grid-rows-6 sm:grid-rows-6 md:grid-rows-3 lg:grid-rows-2 grid-flow-col justify-around  p-10 w-full ">
+    <div className=" grid grid-rows-6 sm:grid-rows-6 md:grid-rows-3 lg:grid-rows-2 grid-flow-col justify-center xl:justify-around   p-10 w-full ">
           {cards.map((element) => (
-    <Card key={element.name} className="w-[350px] bg-white  text-slate-900 mb-4 rounded-2xl transition duration-700 ease-in-out hover:bg-green-200 transform hover:-translate-y-1 hover:scale-110 hover:border-green-200">
+    <Card key={element.name} className="w-[340px]  bg-white   text-slate-900 mb-8 rounded-2xl transition duration-700 ease-in-out hover:bg-green-200 transform hover:-translate-y-1 hover:scale-110 hover:border-green-200">
 
         <CardContent>
-          <img src={element.images} alt="" />
+          <img src={element.images} alt="" className="size-min" />
       </CardContent>
-      <CardHeader> 
-        <CardTitle className='text-center'>{element.name} </CardTitle>
-        <CardDescription>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quo nam minus labore facere commodi cumque. Fuga, esse! Ea voluptate quos illum iure optio quis enim laudantium saepe earum minima?</CardDescription>
+      <CardHeader className="mt-0"> 
+        <CardTitle className='text-center '>{element.name} </CardTitle>
+        <CardDescription className="text-xs text-center lg:text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quo nam minus labore facere commodi cumque. Fuga, esse! </CardDescription>
       </CardHeader>
     
-      <CardFooter className="flex justify-between">
-        <Button variant="outline" className="bg-green-500 rounded-2xl border-green-500  ">ADD TO CART</Button>
-        <Button>BUY NOW</Button>
+      <CardFooter className="flex justify-self-end">
+       <Button  variant="outline" className="bg-green-500 rounded-2xl border-green-500  "><Link to="/cart">ADD TO CART</Link></Button>
       </CardFooter>
     </Card>
       ))}

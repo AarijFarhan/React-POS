@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Link , NavLink} from 'react-router-dom'
 const Footer = () => {
   return (
     <footer className="bg-gray-800 p-10 bottom-0 ">
@@ -17,24 +17,24 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
           <ul className="text-sm text-gray-400 space-y-2">
             <li>
-              <a href="#" className="hover:text-white">
+              <Link to="/home" className="hover:text-white">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-white">
-                Services
-              </a>
+             <Link Link to="/menu" className="hover:text-white">
+                Menu
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-white">
-                Portfolio
-              </a>
+              <Link to="/cart" className="hover:text-white">
+                Cart
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-white">
+              <Link to="/contact" className="hover:text-white">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

@@ -1,9 +1,10 @@
 import React from 'react'
 
 function Cart() {
+  
   return (
-    <div>
-      under construction
+    <div className='w-full h-screen flex text-3xl lg:text-9xl font-bold justify-center items-center bg-green-200'>
+      under construction!
     </div>
   )
 }
