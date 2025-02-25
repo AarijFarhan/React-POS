@@ -1,6 +1,7 @@
 
 import { CardWithForm } from '@/components/CardWithForm'
 import Starter from '@/components/Starter'
+import Sweets from '@/components/Sweets'
 import React from 'react'
 
 function Menu() {
@@ -17,6 +18,10 @@ function Menu() {
     <div className='bg-slate-100 text-slate-900 text-xl  h-fit font-extrabold flex flex-col justify-center py-10  items-center'>
         <h1 >STARTER</h1>
         <Starter />   
+    </div>
+    <div className='bg-slate-100 text-slate-900 text-xl  h-fit font-extrabold flex flex-col justify-center py-10  items-center'>
+        <h1 >DESSERTS</h1>
+        <Sweets />   
     </div>
     </div>
   )

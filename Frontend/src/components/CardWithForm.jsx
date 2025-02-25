@@ -48,12 +48,12 @@ export function CardWithForm() {
   return (
     <div className=" grid grid-rows-6 sm:grid-rows-6 md:grid-rows-3 lg:grid-rows-2 grid-flow-col justify-around  p-10 w-full ">
           {cards.map((element) => (
-    <Card className="w-[350px] bg-white  text-slate-900 mb-4 rounded-2xl transition duration-700 ease-in-out hover:bg-green-200 transform hover:-translate-y-1 hover:scale-110 hover:border-green-200">
+    <Card key={element.name} className="w-[350px] bg-white  text-slate-900 mb-4 rounded-2xl transition duration-700 ease-in-out hover:bg-green-200 transform hover:-translate-y-1 hover:scale-110 hover:border-green-200">
 
         <CardContent>
           <img src={element.images} alt="" />
       </CardContent>
-      <CardHeader>
+      <CardHeader> 
         <CardTitle className='text-center'>{element.name} </CardTitle>
         <CardDescription>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quo nam minus labore facere commodi cumque. Fuga, esse! Ea voluptate quos illum iure optio quis enim laudantium saepe earum minima?</CardDescription>
       </CardHeader>

@@ -1,12 +1,10 @@
 import React from 'react'
 import {
     Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
+   
   } from "@/components/ui/card"
+  import { Switch } from "@/components/ui/switch"
+
 
 
 
@@ -51,9 +49,11 @@ function Starter() {
     ]
   return (
     <>
+<Switch id="airplane-mode" className="bg-white" />
+
     <div className='grid  grid-rows-3 sm:grid-rows-6 sm:grid-flow-col  md:grid-rows-6 lg:grid-rows-3 xl:grid-rows-3  w-full '>
         {sta_data.map((input) => (
-<Card className='grid   grid-flow-col justify-between  rounded-xl m-5 border-0 p-4 '>
+<Card className='grid   grid-flow-col justify-between  rounded-xl m-5 border-0 p-4 ' key={input.title} > 
    <div className='flex flex-row sm:flex-flow-col '>
 
         <img src={input.images} className='size-fit rounded-full'/> 
