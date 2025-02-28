@@ -1,27 +1,10 @@
 import React  from 'react'
 import {Link , NavLink} from 'react-router-dom'
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+
 
 
 export default function Header(){
 
-    const [username, setUsername] = useState([])
-
-    // useEffect(() => {
-
-    //     const fetchData = async () => {
-    //         try {
-    //             const response = await axios.get('http://localhost:5000/signup');
-    //             setUsername(response.data.username)
-    //         } catch (error) {
-    //             console.error(error);
-    //         }
-    //     }
-
-    //   fetchData()
-    // }, [])
-    
     
 
 

@@ -9,17 +9,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { useCart } from "@/context/CartContext";
 
-import {Link , NavLink} from 'react-router-dom'
-// import { Input } from "@/components/ui/input"
-// import { Label } from "@/components/ui/label"
-// import {
-//   Select,
-//   SelectContent,
-//   SelectItem,
-//   SelectTrigger,
-//   SelectValue,
-// } from "@/components/ui/select"
 const cards = [
   {
     images:"https://websitedemos.net/fast-food-04/wp-content/uploads/sites/792/2021/03/burger-06-free-img.png",
@@ -47,6 +38,7 @@ const cards = [
   },
 ]
 export function CardWithForm() {
+  const { addToCart } = useCart();
   return (
     <div className=" grid grid-rows-6 sm:grid-rows-6 md:grid-rows-3 lg:grid-rows-2 grid-flow-col justify-center xl:justify-around   p-10 w-full ">
           {cards.map((items) => (
@@ -61,7 +53,7 @@ export function CardWithForm() {
       </CardHeader>
     
       <CardFooter className="flex justify-self-end">
-       <Button  variant="outline" className="bg-green-500 rounded-2xl border-green-500  "><Link to="/cart">ADD TO CART</Link></Button>
+       <Button  variant="outline" className="bg-green-500 rounded-2xl border-green-500 " onClick={() => addToCart(items)}>ADD TO CART</Button>
       </CardFooter>
     </Card>
       ))}
