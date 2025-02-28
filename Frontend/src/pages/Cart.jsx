@@ -6,13 +6,14 @@ function Cart() {
   const { cart, increaseQuantity, decreaseQuantity, removeFromCart } = useCart();
 
   return (
-    <div className="p-6 h-screen">
-      <h1 className="text-2xl font-bold text-center">Shopping Cart</h1>
+    <div className="p-6 h-screen bg-green-200 ">
+      <h1 className="text-2xl font-bold text-center ">Shopping Cart</h1>
 
       {cart.length === 0 ? (
         <p className="mt-4 text-center">Your cart is empty.</p>
       ) : (
-        <div className="mt-6 space-y-4">
+        
+        <div className="mt-6 space-y-4 w-full  flex flex-col justify-center items-center  bg-green-200">
           {cart.map((item) => (
             <div key={item.title} className="flex items-center justify-between border p-4 rounded-lg">
               {/* Product Image & Details */}

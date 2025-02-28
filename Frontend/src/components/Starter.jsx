@@ -7,7 +7,7 @@ import {
 
   import { Button } from "@/components/ui/button"
   import { useCart } from "@/context/CartContext";
-  import {NavLink} from 'react-router-dom'
+//   import {NavLink} from 'react-router-dom'
   
 
     const sta_data = [
@@ -66,9 +66,9 @@ const { addToCart } = useCart();
             </div>
        </div>
        <div className='flex flex-col xl:flex-row lg:flex-row md:flex-row items-center xl:items-between lg:items-between md:items-between justify-center xl:justify-between lg:justify-between md:justify-between '>
-       <NavLink to="/cart">
+     
           <Button  variant="outline" className="bg-green-500 rounded-2xl border-green-500 text-xs lg:text-sm md:text-sm xl:text-sm size-auto"  onClick={() => addToCart(items)}  >ADD TO CART</Button>
-          </NavLink>
+          
           
           <h5 className='text-lg lg:text-2xl xl:text-2xl text-rose-500 w-5  ml-0  xl:ml-1 xl:mr-7 md:ml-3 lg:ml-3 m'>{items.price}</h5>
           </div>
