@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 // Create Context
 const CartContext = createContext();
@@ -6,6 +6,21 @@ const CartContext = createContext();
 // Provide the Context
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
+
+  // Load cart from localStorage if available
+  useEffect(() => {
+    const storedCart = localStorage.getItem("cart");
+    if (storedCart) {
+      setCart(JSON.parse(storedCart));
+    }
+  }, []);
+
+  // Update localStorage whenever the cart changes
+  useEffect(() => {
+    if (cart.length > 0) {
+      localStorage.setItem("cart", JSON.stringify(cart));
+    }
+  }, [cart]);
 
   // Add to Cart (Increase Quantity if Already Exists)
   const addToCart = (item) => {
@@ -24,7 +39,7 @@ export const CartProvider = ({ children }) => {
     });
   };
 
-  //  Increase Quantity
+  // Increase Quantity
   const increaseQuantity = (title) => {
     setCart((prevCart) =>
       prevCart.map((item) =>
@@ -34,21 +49,37 @@ export const CartProvider = ({ children }) => {
   };
 
   // Decrease Quantity (Ensure It Doesn't Go Below 1)
+
   const decreaseQuantity = (title) => {
     setCart((prevCart) =>
-      prevCart.map((item) =>
-        item.title === title ? { ...item, quantity: Math.max(1, item.quantity - 1) } : item
-      )
+      prevCart
+        .map((item) =>
+          item.title === title ? { ...item, quantity: item.quantity - 1 } : item
+        )
+        .filter((item) => item.quantity > 0) // Remove item if quantity becomes 0
     );
   };
-
   // Remove Only One Item (Not the Whole Cart)
   const removeFromCart = (title) => {
     setCart((prevCart) => prevCart.filter((item) => item.title !== title));
   };
 
+  // Calculate the total price of all items in the cart
+  const calculateTotal = () => {
+    return cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  };
+
   return (
-    <CartContext.Provider value={{ cart, addToCart, increaseQuantity, decreaseQuantity, removeFromCart }}>
+    <CartContext.Provider
+      value={{
+        cart,
+        addToCart,
+        increaseQuantity,
+        decreaseQuantity,
+        removeFromCart,
+        calculateTotal, // Providing total calculation function
+      }}
+    >
       {children}
     </CartContext.Provider>
   );

@@ -3,17 +3,20 @@ import { useCart } from "@/context/CartContext";
 import { Button } from "@/components/ui/button";
 
 function Cart() {
-  const { cart, increaseQuantity, decreaseQuantity, removeFromCart } = useCart();
+  const { cart, increaseQuantity, decreaseQuantity,calculateTotal, removeFromCart } = useCart();
 
   return (
-    <div className="p-6 h-screen bg-green-200 ">
-      <h1 className="text-2xl font-bold text-center ">Shopping Cart</h1>
+    <div className="flex justify-center items-center h-fit bg-green-200">
+    <div className="p-6 h-full bg-green-200 ">
 
       {cart.length === 0 ? (
+      <div className="h-screen"><h1 className="text-2xl font-bold text-center ">Shopping Cart</h1>
         <p className="mt-4 text-center">Your cart is empty.</p>
-      ) : (
-        
-        <div className="mt-6 space-y-4 w-full  flex flex-col justify-center items-center  bg-green-200">
+        </div>
+      ) 
+      : (
+        <div className="h-fit"><h1 className="text-2xl font-bold text-center ">Shopping Cart</h1>
+        <div className="mt-6 space-y-4 h-fit  flex flex-col justify-center items-center  bg-green-200">
           {cart.map((item) => (
             <div key={item.title} className="flex items-center justify-between border p-4 rounded-lg">
               {/* Product Image & Details */}
@@ -21,7 +24,7 @@ function Cart() {
                 <img src={item.images} alt={item.title} className="w-16 h-16 rounded-lg mr-4" />
                 <div>
                   <h2 className="text-lg font-semibold">{item.title}</h2>
-                  <p className="text-gray-600">Price: {item.price}</p>
+                  <p className="text-gray-600">Price: ${item.price}</p>
                 </div>
               </div>
 
@@ -35,9 +38,11 @@ function Cart() {
                 Remove
               </Button>
             </div>
+            
           ))}
-        </div>
+        </div> <h3 className="text-right">Total: ${calculateTotal().toFixed(2)}</h3></div>
       )}
+    </div>
     </div>
   );
 }

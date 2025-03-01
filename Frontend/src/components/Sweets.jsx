@@ -11,37 +11,37 @@ import {
             images:"https://websitedemos.net/fast-food-04/wp-content/uploads/sites/792/2021/03/menu-05-free-img.jpg",
             title:"Baked Apple Pie",
             description:"Our special homemade apple pie",
-            price:"$2.5"
+            price:2.50
         },
         {
             images:"https://websitedemos.net/fast-food-04/wp-content/uploads/sites/792/2021/03/menu-11-free-img.jpg",
             title:"Vanilla Ice Cream",
             description:"Our special homemade apple pie",
-            price:"$1"
+            price:1.00
         },
         {
             images:"https://websitedemos.net/fast-food-04/wp-content/uploads/sites/792/2021/03/menu-06-free-img.jpg",
             title:"Chocolate Chip Cookie",
             description:"Chocolate Chip Cookie Lorem Ipsum Dolor",
-            price:"$1.5"
+            price:1.50
         },
         {
             images:"https://websitedemos.net/fast-food-04/wp-content/uploads/sites/792/2021/03/menu-12-free-img.jpg",
             title:"Strawberry Shake",
             description:"Whipped Cream, Milk, Strawberry Flavours",
-            price:"$2"
+            price:2.00
         },
         {
             images:"https://websitedemos.net/fast-food-04/wp-content/uploads/sites/792/2021/03/menu-10-free-img.jpg",
             title:"Hot Caramel Shake",
             description:"Caramel, Whipped Cream, Milk, Chocolate",
-            price:"$2"
+            price:2.00
         },
         {
             images:"https://websitedemos.net/fast-food-04/wp-content/uploads/sites/792/2021/03/menu-07-free-img.jpg",
             title:"Classic Fruit Tart",
             description:"Apple, Strawberry, Orange, Banana, Raspberry",
-            price:"$1.5"
+            price:1.50
         },
     ]
     
@@ -67,7 +67,7 @@ import {
           <Button  variant="outline" className="bg-green-500 rounded-2xl border-green-500 text-xs lg:text-sm md:text-sm xl:text-sm size-auto"  onClick={() => addToCart(items)}  >ADD TO CART</Button>
         
           
-          <h5 className='text-lg lg:text-2xl xl:text-2xl text-rose-500 w-5  ml-0  xl:ml-1 xl:mr-7 md:ml-3 lg:ml-3 m'>{items.price}</h5>
+          <h5 className='text-lg lg:text-2xl xl:text-2xl text-rose-500 w-5  ml-0  xl:ml-1 xl:mr-7 md:ml-3 lg:ml-3 m'>${items.price}</h5>
           </div>
     </Card>
     ))
