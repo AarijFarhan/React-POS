@@ -29,12 +29,12 @@ function Cart() {
               </div>
 
               <div className="flex items-center space-x-3">
-                <Button onClick={() => decreaseQuantity(item.title)}>-</Button>
+                <Button onClick={() => decreaseQuantity(item.title)} className="">-</Button>
                 <span className="text-lg font-bold">{item.quantity}</span>
                 <Button onClick={() => increaseQuantity(item.title)}>+</Button>
               </div>
 
-              <Button onClick={() => removeFromCart(item.title)} className="bg-red-500">
+              <Button onClick={() => removeFromCart(item.title)} className="bg-red-500 hover:bg-rose-950 rounded-xl">
                 Remove
               </Button>
             </div>
