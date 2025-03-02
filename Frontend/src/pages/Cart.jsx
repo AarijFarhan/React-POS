@@ -6,8 +6,8 @@ function Cart() {
   const { cart, increaseQuantity, decreaseQuantity,calculateTotal, removeFromCart } = useCart();
 
   return (
-    <div className="flex justify-center items-center h-fit bg-green-200">
-    <div className="p-6 h-full bg-green-200 ">
+    <div className="flex justify-center items-center h-fit bg-green-100">
+    <div className="p-6 h-full bg-green-100 ">
 
       {cart.length === 0 ? (
       <div className="h-screen"><h1 className="text-2xl font-bold text-center ">Shopping Cart</h1>
@@ -16,7 +16,7 @@ function Cart() {
       ) 
       : (
         <div className="h-fit"><h1 className="text-2xl font-bold text-center ">Shopping Cart</h1>
-        <div className="mt-6 space-y-4 h-fit  flex flex-col justify-center items-center  bg-green-200">
+        <div className="mt-6 space-y-4 h-fit  flex flex-col justify-center items-center  bg-green-100">
           {cart.map((item) => (
             <div key={item.title} className="flex items-center justify-between border p-4 rounded-lg">
               {/* Product Image & Details */}
@@ -28,13 +28,13 @@ function Cart() {
                 </div>
               </div>
 
-              <div className="flex items-center space-x-3">
-                <Button onClick={() => decreaseQuantity(item.title)} className="">-</Button>
-                <span className="text-lg font-bold">{item.quantity}</span>
-                <Button onClick={() => increaseQuantity(item.title)}>+</Button>
+              <div className="flex items-center space-x-5 ">
+                <Button onClick={() => decreaseQuantity(item.title)} className="hover:text-white rounded-full font-bold hover:rounded-full hover:bg-slate-800">-</Button>
+                <span className="text-lg font-bold ">{item.quantity}</span>
+                <Button onClick={() => increaseQuantity(item.title)} className="hover:text-white rounded-full font-bold hover:rounded-full hover:bg-slate-800">+</Button>
               </div>
 
-              <Button onClick={() => removeFromCart(item.title)} className="bg-red-500 hover:bg-rose-950 rounded-xl">
+              <Button onClick={() => removeFromCart(item.title)} className="bg-red-500 hover:bg-rose-950 hover:text-white rounded-xl">
                 Remove
               </Button>
             </div>
