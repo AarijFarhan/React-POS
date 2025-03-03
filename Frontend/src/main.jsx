@@ -6,7 +6,7 @@ import { createRoutesFromElements, Route, Router } from 'react-router-dom'
 import Layout from './components/Layout'
 import { createBrowserRouter , RouterProvider } from'react-router-dom'
 import Home from './pages/Home'
-import Menu from './pages/Menu'
+import Menu from "./pages/Menu"
 import Contact from './pages/Contact'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
