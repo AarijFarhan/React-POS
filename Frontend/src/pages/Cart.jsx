@@ -44,6 +44,7 @@ function Cart() {
               <div className="xl:w-[700px] text-end">
 
             <h3 className="text-right ">Total: ${calculateTotal().toFixed(2)}</h3>
+            <Button type="button" className="bg-slate-400 rounded-xl hover:bg-slate-300">CheckOut</Button>
               </div>
             </div>
           </div>
