@@ -27,9 +27,10 @@ function Cart() {
                       <p className="text-gray-600">Price: ${item.price}</p>
                     </div>
                   </div>
-                
+                <div className="flex"> 
+
                   <div className="flex items-center space-x-5 mb-4 md:mb-0">
-                    <Button onClick={() => decreaseQuantity(item.title)} className="text-slate-300 rounded-xl font-bold bg-red-600 hover:bg-red-700 hover:text-slate-50">-</Button>
+                    <Button onClick={() => decreaseQuantity(item.title)} className="text-slate-300 rounded-xl  font-bold bg-red-600 hover:bg-red-700 hover:text-slate-50">-</Button>
                     <span className="text-lg font-bold">{item.quantity}</span>
                     <Button onClick={() => increaseQuantity(item.title)} className="text-slate-300 rounded-xl font-bold bg-green-600 hover:bg-green-700 hover:text-slate-50">+</Button>
                   </div>
@@ -37,6 +38,7 @@ function Cart() {
                   <Button onClick={() => removeFromCart(item.title)} className="bg-red-500 hover:bg-rose-950 mx-4 hover:text-white rounded-xl">
                     Remove
                   </Button>
+                </div>
                 </div>
               ))}
               <div className="xl:w-[700px] text-end">

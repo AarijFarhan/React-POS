@@ -7,7 +7,6 @@ import {
 
   import { Button } from "@/components/ui/button"
   import { useCart } from "@/context/CartContext";
-//   import {NavLink} from 'react-router-dom'
   
 
     const sta_data = [
