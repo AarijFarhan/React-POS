@@ -5,13 +5,11 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 
 
-
 router.post('/login',async (req, res) => { 
     const { email, password } = req.body;
-    let user = await userModel.findOne({ email });
+    let user = await User.findOne({ email });
     if (!user) {
-      return res.status(404).json({ message: "User not found" });
-        
+      return res.status(404).json({ message: "User not found" });    
     }
   
     bcrypt.compare(password, user.password, (err, result) => {
@@ -33,12 +31,12 @@ router.post('/login',async (req, res) => {
 router.post('/signup', async (req, res) => {
     // console.log(req.body)
     const { username, email, password } = req.body
-    let user = await userModel.findOne({ email})
+    let user = await User.findOne({ email})
     
     if(user)return res.status(400).send({message:'User Already Registered'})
         bcrypt.genSalt(10, (err,salt) => {
             bcrypt.hash(password, salt, async(err ,hash)=>{
-                let user = await userModel.create({
+                let user = await User.create({
                     username,
                     email,
                     password: hash,

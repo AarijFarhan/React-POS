@@ -13,11 +13,29 @@ const Login = () => {
   const {
     register,
     handleSubmit,
-    onSubmit,
     formState: { errors },
   } = useForm();
   
   const navigate = useNavigate()
+
+  const onSubmit = async (data) => {
+    try {
+      const response = await axios.post("http://localhost:5000/login", data);
+      const token = response.data.token;
+      if (token) {
+        Cookies.set("token", token, {
+          expires: 7, // Token expires in 7 days
+          secure: false, // Use true in production (HTTPS)
+          sameSite: "strict",
+        });
+        navigate("/menu"); // Redirect to dashboard after successful login
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      // Display error message to the user
+      alert("Invalid email or password. Please try again.");
+    }
+  }
 
 
 

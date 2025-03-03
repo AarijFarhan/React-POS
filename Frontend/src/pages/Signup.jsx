@@ -9,46 +9,37 @@ const SignUp = () => {
   const {
     register,
     handleSubmit,
-    onSubmit,
-    onSubmitting,
     formState: { errors },
   } = useForm();
 
 
-//   const navigate = useNavigate()
+  const navigate = useNavigate()
 
-
-//   const onSubmit = async (data) => {
-
-   
-
-
-
-//     try {
-//       const response = await axios.post("http://localhost:5000/signup", data);
-//       const token = response.data.token;
-//       if (token) {
-//         Cookies.set("token", token, {
-//           expires: 7, // Token expires in 7 days
-//           secure: false, // Use true in production (HTTPS)
-//           sameSite: "strict",
-//         });
+  const onSubmit = async (data) => {
+    try {
+      const response = await axios.post("http://localhost:5000/signup", data);
+      const token = response.data.token;
+      if (token) {
+        Cookies.set("token", token, {
+          expires: 7, // Token expires in 7 days
+          secure: false, // Use true in production (HTTPS)
+          sameSite: "strict",
+        });
     
 
-//       console.log("Sign Up Success:", response.data);
-//       alert(response.data.message);
+      console.log("Sign Up Success:", response.data);
+      alert(response.data.message);
+      navigate('/login')
+      }
+      else{
+        alert("No token Recieved")
+      }
 
-//       navigate('/login')
-//       }
-//       else{
-//         alert("No token Recieved")
-//       }
-
-//     } catch (error) {
-//       console.error("Sign Up Failed:", error);
-//       alert(error.response.data.message || "An error occurred while signing up");
-//     }
-//   };
+    } catch (error) {
+      console.error("Sign Up Failed:", error);
+      alert(error.response.data.message || "An error occurred while signing up");
+    }
+  };
   
   return (
     <div className="max-w-md mx-auto mt-10 bg-white p-8 rounded shadow-lg">
