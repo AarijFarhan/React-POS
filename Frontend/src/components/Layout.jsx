@@ -9,6 +9,7 @@ import Footer from '../components/Footer'
 function Layout() {
   return (
     <>
+  
    <Navigation />
    <Outlet />
    <Footer />

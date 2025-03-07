@@ -17,7 +17,7 @@ function Menu() {
     </div>
     <div className='bg-slate-50 text-slate-900 text-xl  h-fit font-extrabold flex flex-col justify-center py-10  items-center'>
         <h1 >MAIN COURSE</h1>
-        <CardWithForm />     
+        <CardWithForm addToCart={addToCart}  />     
     </div>
     <div className='bg-slate-100 text-slate-900 text-xl  h-fit font-extrabold flex flex-col justify-center py-10  items-center'>
         <button type="click" checked={showDesert} onClick={handleToggle} variant="outline" className="bg-green-500 px-6 py-3 rounded-3xl mt-3 mb-5  border-black transition duration-700 ease-in-out hover:bg-green-200 transform hover:-translate-y-1 hover:scale-110 hover:border-green-200"><h1 >STARTERS & DESSERTS</h1></button> 

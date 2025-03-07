@@ -1,6 +1,5 @@
-import * as React from "react"
-
-import { Button } from "@/components/ui/button"
+import * as React from "react";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -70,6 +69,6 @@ export function CardWithForm() {
       </CardFooter>
     </Card>
       ))}
-        </div>
-  )
+    </div>
+  );
 }

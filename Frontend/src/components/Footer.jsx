@@ -2,7 +2,7 @@ import React from "react";
 import {Link , NavLink} from 'react-router-dom'
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 p-10 bottom-0 ">
+    <footer className="bg-gray-800 p-10 bottom-0">
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 text-gray-200">
        
         <div>
@@ -22,17 +22,17 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-             <Link Link to="/menu" className="hover:text-white">
+              <a href="/menu" className="hover:text-white">
                 Menu
-              </Link>
+              </a>
             </li>
             <li>
-              <Link to="/cart" className="hover:text-white">
+              <a href="/cart" className="hover:text-white">
                 Cart
-              </Link>
+              </a>
             </li>
             <li>
-              <Link to="/contact" className="hover:text-white">
+              <Link href="/contact" className="hover:text-white">
                 Contact
               </Link>
             </li>
@@ -70,8 +70,8 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
           <ul className="text-sm text-gray-400 space-y-2">
-            <li>Email: info@example.com</li>
-            <li>Phone: +1 234 567 890</li>
+            <li>Email: pos@gmail.com</li>
+            <li>Phone: +92 XXX XXX XXXX</li>
             <li className="flex space-x-4 mt-4">
               <a href="#" className="hover:text-white">
                 <i className="fab fa-facebook-f"></i> Facebook
@@ -88,7 +88,7 @@ const Footer = () => {
       </div>
       <div className="mt-10">
       <p className="text-center text-gray-400 mt-10 ">
-        &copy; {new Date().getFullYear()} Your Website. All rights reserved.
+        &copy; {new Date().getFullYear()} POS . All rights reserved.
       </p>
       </div>
     </footer>
