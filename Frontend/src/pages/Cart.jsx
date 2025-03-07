@@ -2,28 +2,35 @@ import React from "react";
 import { useCart } from "@/context/CartContext";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card"
+import { Link } from "react-router-dom";
 function Cart() {
   const { cart, increaseQuantity, decreaseQuantity, calculateTotal, removeFromCart } = useCart();
 
   return (
-    <div className="flex justify-center items-center h-fit bg-green-100">
-      <div className="p-6 h-fullw-full max-w-4xl bg-green-100">
+    <div className="flex justify-center items-center h-fit bg-green-50">
+      <div className="p-6 h-full w-full max-w-4xl bg-green-50">
 
         {cart.length === 0 ? (
           <div className="h-screen ">
-            <div className="">
+            <Card className="bg-green-100 p-6 rounded-2xl flex flex-col justify-center">
+            <div className="flex justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-8 ">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+</svg>
 
-            <h1 className="text-3xl font-bold text-center">Shopping Cart</h1>
-            <p className="mt-4 text-center">Your cart is empty.</p>
+            <h1 className="text-3xl font-bold text-center pl-3"> Shopping Cart</h1>
             </div>
+            <p className="mt-4 text-center">Your cart is empty.</p>
+            <Button className="mt-3" ><Link to="/menu"><strong className="border rounded-3xl hover:bg-green-500 hover:text-white p-3">BacK To Menu</strong></Link></Button>
+            </Card>
           </div>
         ) : (
-          <div className="h-fit w-full bg-green-100">
+          <div className="h-fit w-full bg-green-50">
             <h1 className="text-3xl font-bold text-center">Shopping Cart</h1>
           
-            <div className="mt-6 space-y-4 h-fit flex flex-col justify-center items-center bg-green-100" style={{ minHeight: '70vh' }}>
+            <div className="mt-6 space-y-4 h-fit flex flex-col justify-center items-center bg-green-50" style={{ minHeight: '70vh' }}>
               {cart.map((item) => (
-                <Card key={item.title} className="flex flex-col md:flex-row bg-green-50 rounded-2xl items-center justify-between  p-4  w-full md:w-auto">
+                <Card key={item.title} className="flex flex-col md:flex-row bg-green-100 rounded-2xl items-center justify-between  p-4  w-full md:w-auto">
                   <div className="flex items-center mb-4 md:mb-0">
                     <img src={item.images} alt={item.title} className="w-16 h-16 rounded-xl bg-black mr-4" />
                     <div className="w-full md:w-[400px]">
