@@ -14,8 +14,8 @@ function Menu() {
 
   return (
     <div className=''>
-      <div className='bg-green-500 text-white h-96 font-extrabold flex flex-col  justify-center  items-center'> 
-        <h3 className='text-xl italic font-mono'>Check Out Our</h3>
+      <div className=' bg-[url(banner.jpg)] text-center   opacity-95 bg-black tracking-widest text-white h-96 font-extrabold flex flex-col  justify-center  items-center'> 
+        <h1 className='text-4xl font- italic font-mono '>Check Out Our</h1>
         <h1 className='xl:text-9xl lg:text-9xl md:text-9xl sm:text-9xl text-6xl pt-28 xl:pt-36 gap-4 '>M  E  N  U</h1>
       </div>
       <div className='bg-slate-50 text-slate-900 text-xl  h-fit font-extrabold flex flex-col justify-center py-10  items-center'>

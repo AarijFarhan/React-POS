@@ -10,11 +10,11 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 
-
+import { Link, NavLink } from "react-router-dom";
 function Home() {
   return (
     < >
-<div className="bg-[url(banner.jpg)] text-center items-center h-64 flex justify-center opacity-95 bg-black tracking-widest">
+<div className="bg-[url(banner.jpg)] text-center items-center h-96 flex justify-center opacity-95 bg-black tracking-widest">
         <h1 className="text-white brightness-[100px] text-5xl bg-transparent font-bold">Welcome</h1>
       </div>
 
@@ -118,7 +118,7 @@ function Home() {
         Rooted in passion, we curate unforgettable dining experiences and offer exceptional services, blending culinary artistry with warm hospitality.
       </p>
       <button className="bg-green-500 text-white px-6 py-3 rounded-3xl mt-5">
-        Explore
+       <NavLink to="/menu"> Explore</NavLink>
       </button>
     </div>
 

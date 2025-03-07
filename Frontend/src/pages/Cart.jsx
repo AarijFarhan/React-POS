@@ -1,25 +1,29 @@
 import React from "react";
 import { useCart } from "@/context/CartContext";
 import { Button } from "@/components/ui/button";
-
+import { Card } from "@/components/ui/card"
 function Cart() {
   const { cart, increaseQuantity, decreaseQuantity, calculateTotal, removeFromCart } = useCart();
 
   return (
     <div className="flex justify-center items-center h-fit bg-green-100">
-      <div className="p-6 h-full bg-green-100 w-full max-w-4xl">
+      <div className="p-6 h-fullw-full max-w-4xl bg-green-100">
 
         {cart.length === 0 ? (
-          <div className="h-screen">
+          <div className="h-screen ">
+            <div className="">
+
             <h1 className="text-3xl font-bold text-center">Shopping Cart</h1>
             <p className="mt-4 text-center">Your cart is empty.</p>
+            </div>
           </div>
         ) : (
-          <div className="h-fit w-full">
+          <div className="h-fit w-full bg-green-100">
             <h1 className="text-3xl font-bold text-center">Shopping Cart</h1>
+          
             <div className="mt-6 space-y-4 h-fit flex flex-col justify-center items-center bg-green-100" style={{ minHeight: '70vh' }}>
               {cart.map((item) => (
-                <div key={item.title} className="flex flex-col md:flex-row items-center justify-between border p-4 rounded-xl w-full md:w-auto">
+                <Card key={item.title} className="flex flex-col md:flex-row bg-green-50 rounded-2xl items-center justify-between  p-4  w-full md:w-auto">
                   <div className="flex items-center mb-4 md:mb-0">
                     <img src={item.images} alt={item.title} className="w-16 h-16 rounded-xl bg-black mr-4" />
                     <div className="w-full md:w-[400px]">
@@ -39,7 +43,7 @@ function Cart() {
                     Remove
                   </Button>
                 </div>
-                </div>
+                </Card>
               ))}
               <div className="xl:w-[700px] text-end">
                 
