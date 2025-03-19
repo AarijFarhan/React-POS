@@ -123,7 +123,7 @@ function Home() {
     </div>
 
     {/* Right Section (Image or Content) */}
-    <div className="grid grid-cols-2 gap-3 mt-6 md:mt-0">
+    <div className="grid grid-cols-1 gap-3 mt-6 md:mt-0 sm:grid-cols-2">
     <Card>
 <CardHeader className="bg-white">
   <CardTitle><h2 className='text-green-600'>Catering</h2></CardTitle>
