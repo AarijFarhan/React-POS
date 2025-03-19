@@ -27,7 +27,7 @@ function Menu() {
       </div>
       <div className='bg-slate-100 text-slate-900 text-xl  h-fit  flex flex-col justify-center py-10  items-center'>
         <button type="click" checked={showDesert} onClick={handleToggle} variant="outline" className=" text-white bg-red-500 px-6 py-3 rounded-3xl mt-3 mb-5  border-black transition duration-700 ease-in-out hover:bg-red-600 transform hover:-translate-y-1 hover:scale-110 hover:border-red-600">
-          <h1 className='font-extrabold'>STARTERS & DESSERTS</h1>
+          <h1 className='font-bold'>view Starters or Desserts</h1>
         </button> 
         {showDesert ? <Sweets /> : <Starter />}
       </div>
