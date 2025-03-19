@@ -51,9 +51,9 @@ function Home() {
 
 
      {/*Dishes Section */}
-     <div className='bg-white p-10 md:p-20'>
+     <div className='bg-white p-10 md:p-20 sm:p-10'>
         <div className='flex flex-col md:flex-row items-center mx-5 md:mx-10'>
-          <div className='w-full md:w-full justify-center p-6 text-center md:text-left'>
+          <div className='w-full md:w-full justify-center text-center md:text-left'>
             <h3 className='text-red-500 font-bold mt-6 text-lg md:text-xl'>Special Dishes</h3>
             <h1 className='text-2xl md:text-4xl font-bold mt-5'>Standout Dishes From Our Menu</h1>
             <div className='flex flex-wrap justify-center md:justify-start gap-6 mt-5'>
@@ -109,9 +109,7 @@ function Home() {
     {/* Left Section */}
     <div className="w-full md:w-1/2 p-4 text-center md:text-left">
       <h3 className="text-red-500 font-bold mt-4">Our Story & Services</h3>
-      <h1 className="text-2xl md:text-3xl font-bold mt-3">
-        Our Culinary Journey And Services
-      </h1>
+      <h1 className="text-2xl md:text-3xl font-bold mt-3">Our Culinary Journey And Services</h1>
       <p className="mt-3 text-base md:text-lg max-w-md mx-auto md:mx-0">
         Rooted in passion, we curate unforgettable dining experiences and offer exceptional services, blending culinary artistry with warm hospitality.
       </p>

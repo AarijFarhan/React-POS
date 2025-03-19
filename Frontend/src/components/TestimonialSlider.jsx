@@ -35,9 +35,9 @@ const TestimonialSlider = () => {
     <div className="flex flex-col items-center p-6 bg-white rounded-2xl w-full ">
         
         <div className='md:flex sm:block my-0 mx-10 items-center '>
-          <div className='sm:w-full p-6'>
-            <h3 className='text-red-500 font-bold mt-6 text-center'>Testimonials</h3>
-            <h1 className='text-3xl sm:text-md font-bold mt-5 '>What Our Customers Say About Us</h1>  
+          <div className='w-full p-4 text-center '>
+            <h3 className='text-red-500 font-bold mt-4 text-center'>Testimonials</h3>
+            <h1 className='text-2xl md:text-3xl font-bold mt-3 '>What Our Customers Say About Us</h1>  
           </div>
         </div>
 
