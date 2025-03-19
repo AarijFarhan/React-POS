@@ -9,7 +9,7 @@ function Cart() {
 
   return (
     <>
-      <div className="bg-[url(banner.jpg)] text-center items-center h-64 flex justify-center opacity-95 bg-black tracking-widest">
+      <div className="bg-[url(./banner.jpg)] text-center items-center h-64 flex justify-center opacity-95 bg-black tracking-widest">
         <h1 className="text-white brightness-[100px] text-5xl bg-transparent font-bold">Cart</h1>
       </div>
 

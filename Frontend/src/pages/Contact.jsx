@@ -23,7 +23,7 @@ const Contact = () => {
   return (
     <>
 
-      <div className="bg-[url(banner.jpg)] text-center items-center h-64 flex justify-center opacity-95 bg-black tracking-widest">
+      <div className="bg-[url(./banner.jpg)] text-center items-center h-64 flex justify-center opacity-95 bg-black tracking-widest">
         <h1 className="text-white brightness-[100px] text-5xl bg-transparent font-bold">Contact Us</h1>
       </div>
       <div className="min-h-screen bg-gray-100 flex items-center justify-center">
