@@ -22,10 +22,10 @@ const Contact = () => {
 
   return (
     <>
+<div className="bg-[url('/banner.jpg')] bg-cover bg-center text-center flex items-center justify-center h-64 opacity-95 tracking-widest"> 
+  <h1 className="text-white text-5xl font-bold bg-transparent">Contact Us</h1>
+</div>
 
-      <div className="bg-[url(./banner.jpg)] text-center items-center h-64 flex justify-center opacity-95 bg-black tracking-widest">
-        <h1 className="text-white brightness-[100px] text-5xl bg-transparent font-bold">Contact Us</h1>
-      </div>
       <div className="min-h-screen bg-gray-100 flex items-center justify-center">
         <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-6 p-6 bg-white shadow-lg rounded-lg">
           {/* Contact Form */}
