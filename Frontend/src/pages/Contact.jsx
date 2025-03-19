@@ -3,19 +3,17 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 
 const Contact = () => {
-  // Define onSubmit function to handle form submission
-  const onSubmit = (data) => {
-    // Send form data to server
-    axios
-axios.post("http://localhost:5000/contact", data)
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
+  const onSubmit = async (data) => {
+    try {
+      const response = await axios.post("http://localhost:5000/contact", data);
+      console.log("Contact Done:", response.data);
+      alert(response.data.message);  
+      }
+     catch (error) {
+      console.error("Failed:", error);
+      alert("An error occurred while signing up");
+    }
   };
-
   const {
     register,
     handleSubmit,
@@ -24,6 +22,7 @@ axios.post("http://localhost:5000/contact", data)
 
   return (
     <>
+
       <div className="bg-[url(banner.jpg)] text-center items-center h-64 flex justify-center opacity-95 bg-black tracking-widest">
         <h1 className="text-white brightness-[100px] text-5xl bg-transparent font-bold">Contact Us</h1>
       </div>

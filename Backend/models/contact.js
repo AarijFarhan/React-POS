@@ -3,10 +3,11 @@ const mongoose = require('mongoose')
 
 // mongoose.connect('mongodb://localhost:27017/POS-Project')
 
-let userSchema = new mongoose.Schema({
+let contactSchema = new mongoose.Schema({
     username: String,
-    password: String,
+    phoneNumber: Number,
     email:String,
+    message:String,
 })
 
-module.exports = mongoose.model('User', userSchema)
+module.exports = mongoose.model('Contact', contactSchema)

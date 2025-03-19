@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Cookies from "js-cookie";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const token = Cookies.get("token");
@@ -13,6 +15,7 @@ const Navbar = () => {
   const handleLogout = () => {
     Cookies.remove("token");
     setIsAuthenticated(false);
+    navigate("/login"); // Redirect to login page after logout
   };
 
   return (
