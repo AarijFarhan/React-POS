@@ -57,12 +57,12 @@ const cards = [
 export function CardWithForm() {
   const { addToCart } = useCart();
   return (
-    <div className=" grid grid-rows-6 sm:grid-rows-6 md:grid-rows-3 md:justify-around lg:grid-rows-2 grid-flow-col justify-center xl:justify-around   p-10 w-full ">
+    <div className="p-10 gap-5 grid grid-rows-6 sm:grid-rows-6 md:grid-rows-3 md:justify-around lg:grid-rows-2 grid-flow-col justify-center xl:justify-around ">
           {cards.map((items) => (
-    <Card key={items.id && items.price } className="w-[340px]  bg-white   text-slate-900 mb-8 rounded-2xl transition duration-600 ease-in-out hover:bg-green-50 transform hover:-translate-y-1 hover:scale-110 hover:border-green-200">
+    <Card key={items.id && items.price } className=" w-full bg-white text-slate-900 mb-8 rounded-2xl transition duration-500 ease-in-out hover:bg-green-50 transform hover:-translate-y-1 hover:scale-110 hover:border-green-200">
 
         <CardContent>
-          <img src={items.images} alt="" className="size-min" />
+          <img src={items.images} alt="" className="pt-5 size-min sm:h-24 w-24 flex justify-center m-auto" />
       </CardContent>
       <CardHeader className="mt-0"> 
         <CardTitle className='text-center '>{items.title} </CardTitle>

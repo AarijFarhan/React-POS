@@ -64,7 +64,7 @@ import {
        </div>
        <div className='flex flex-col xl:flex-row lg:flex-row md:flex-row items-center xl:items-between lg:items-between md:items-between justify-center xl:justify-between lg:justify-between md:justify-between '>
       
-          <Button  variant="outline" className=" font-bold text-white bg-green-500 rounded-2xl border-green-500 text-xs lg:text-sm md:text-sm xl:text-sm size-auto"  onClick={() => addToCart(items)}  >ADD TO CART</Button>
+          <Button  variant="outline" className="mt-2 font-bold text-white bg-green-500 rounded-2xl border-green-500 text-xs lg:text-sm md:text-sm xl:text-sm size-auto"  onClick={() => addToCart(items)}  >ADD TO CART</Button>
         
           
           <h5 className=' font-bold text-lg lg:text-2xl xl:text-2xl text-red-600 w-5  ml-0  xl:ml-1 xl:mr-7 md:ml-3 lg:ml-3 m'>${items.price}</h5>
