@@ -44,7 +44,7 @@ const Contact = () => {
                   placeholder="Enter your name"
                   {...register("username", { required: true })}
                 />
-                {errors.username && <p className="text-red-500 text-sm">Name is required.</p>}
+                {errors.username && <p className="text-red-900 text-sm">Name is required.</p>}
               </div>
               {/* Phone Field */}
               <div>
