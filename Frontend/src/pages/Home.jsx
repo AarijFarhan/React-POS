@@ -14,11 +14,9 @@ import { Link, NavLink } from "react-router-dom";
 function Home() {
   return (
     < >
-<div className="bg-[url(banner.jpg)] text-center items-center h-96 flex justify-center opacity-95 bg-black tracking-widest">
+        <div className="bg-[url(banner.jpg)] text-center items-center h-64 flex justify-center opacity-95 bg-black tracking-widest">
         <h1 className="text-white brightness-[100px] text-5xl bg-transparent font-bold">Welcome</h1>
       </div>
-
-
 
          {/*Categories Section */}
          <div className='bg-white p-10 md:p-20'>
@@ -157,8 +155,8 @@ function Home() {
 
   </div>
 </div>
+  </>
 
-    </>
   )
 }
 
