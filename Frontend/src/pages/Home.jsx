@@ -151,7 +151,7 @@ function Home() {
   <CardDescription> <p>Give the gift of exceptional dining with Foodi Gift Cards</p></CardDescription>
 </CardHeader>
 
-</Card>"
+</Card>
     
     </div>
 
