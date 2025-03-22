@@ -4,6 +4,9 @@ import Starter from '@/components/Starter';
 import Sweets from '@/components/Sweets'
 import { useCart } from '@/context/CartContext';
 
+
+
+
 function Menu() {
   const [showDesert, setShowDessert] = useState(false);
   const { addToCart } = useCart(); 
@@ -11,6 +14,7 @@ function Menu() {
   const handleToggle = () => {
     setShowDessert(!showDesert);
   };
+
 
   return (
     <div className=' '   >
@@ -23,6 +27,8 @@ function Menu() {
       </div> */}
       <div className='bg-slate-50 text-slate-900 text-xl  h-fit font-extrabold flex flex-col justify-center py-10  items-center'>
         <h1 className='text-red-600'>MAIN COURSE</h1>
+
+       
         <CardWithForm addToCart={addToCart} />     
       </div>
       <div className='bg-slate-50 text-slate-900 text-xl  h-fit  flex flex-col justify-center py-10  items-center'>
