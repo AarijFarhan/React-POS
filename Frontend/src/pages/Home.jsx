@@ -14,9 +14,12 @@ import { Link, NavLink } from "react-router-dom";
 function Home() {
   return (
     < >
-        <div className="bg-[url(./banner.jpg)] text-center items-center h-64 flex justify-center opacity-95 bg-black tracking-widest">
-        <h1 className="text-white brightness-[100px] text-5xl bg-transparent font-bold">Welcome</h1>
-      </div>
+<div className="relative h-64 flex justify-center items-center text-center bg-black tracking-widest">
+  {/* Background Image */}
+  <img src="./banner.jpg" alt="Background" className="absolute inset-0 w-full h-full opacity-90" style={{ objectFit: 'cover', backgroundRepeat: 'repeat' }} />
+  <h1 className="relative text-white text-5xl font-bold bg-transparent"> Welcome </h1>
+</div>
+
 
          {/*Categories Section */}
          <div className='bg-white p-10 md:p-20'>
@@ -24,10 +27,11 @@ function Home() {
           <div className='w-full md:w-full justify-center p-6 text-center md:text-left'>
             <h3 className='text-center text-red-500 font-bold mt-6 text-lg md:text-xl'>Customer Favorites</h3>
             <h1 className='text-center pb-10 text-2xl md:text-4xl font-bold mt-5'>Popular Catagories</h1>
-            <div className='flex flex-wrap justify-center md:justify-start gap-6 mt-5'>
+            <div className=''>
+              <Link to={'menu'} className='flex flex-wrap justify-center md:justify-start gap-6 mt-5'>
               {[
-                { name: 'Main Dish', img: './dessert.png' , desc: '(86 dishes)' },
-                { name: 'Break Fast',  img: './dessert.png' , desc: '(12 break fast)' },
+                { name: 'Fast Food', img: './dessert.png' , desc: '(86 dishes)' },
+                { name: 'Sweets',  img: './dessert.png' , desc: '(12 break fast)' },
                 { name: 'Dessert', img: './dessert.png' , desc: '(48 dessert)' }
               ].map((dish, index) => (
                 <Card key={index} className='w-full sm:w-80 justify-center mx-auto '>
@@ -43,6 +47,7 @@ function Home() {
                   </CardHeader>
                 </Card>
               ))}
+              </Link>
             </div>
           </div>
         </div>
@@ -56,6 +61,7 @@ function Home() {
           <div className='w-full md:w-full justify-center text-center md:text-left'>
             <h3 className='text-red-500 font-bold mt-6 text-lg md:text-xl'>Special Dishes</h3>
             <h1 className='text-2xl md:text-4xl font-bold mt-5'>Standout Dishes From Our Menu</h1>
+            <Link to={'menu'}>
             <div className='flex flex-wrap justify-center md:justify-start gap-6 mt-5'>
               {[ 
                 { name: 'Fattoush Salad', price: 24, rating: 4.2, img: './download.jpg' },
@@ -82,6 +88,7 @@ function Home() {
                 </Card>
               ))}
             </div>
+            </Link>
           </div>
         </div>
       </div>

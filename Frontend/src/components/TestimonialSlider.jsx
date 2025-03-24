@@ -4,17 +4,17 @@ import { Button } from "@/components/ui/button";
 
 const testimonials = [
   {
-    name: "John Doe",
+    name: "Akram Khan",
     role: "CEO, Example Inc.",
     text: "This product changed my life! Highly recommend to everyone.",
   },
   {
-    name: "Jane Smith",
+    name: "Samia Akhter",
     role: "Marketing Lead, TechCorp",
     text: "A game-changer in the industry. Amazing experience!",
   },
   {
-    name: "Michael Brown",
+    name: "Huzaifa Rao",
     role: "Founder, StartupX",
     text: "I can't imagine my workflow without it. Super useful!",
   },

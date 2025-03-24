@@ -26,7 +26,7 @@ const Navbar = () => {
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <h1 className="text-green-600 text-3xl font-bold">Logo</h1>
+            <h1 className="text-green-600 text-3xl font-bold">POS</h1>
           </Link>
 
           {/* Mobile Menu Button */}

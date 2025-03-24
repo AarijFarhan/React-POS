@@ -17,14 +17,15 @@ function Menu() {
 
 
   return (
-    <div className=' '   >
-        <div className="bg-[url(./banner.jpg)] text-center items-center h-64 flex justify-center opacity-95 bg-black tracking-widest">
-        <h1 className="text-white brightness-[100px] text-5xl bg-transparent font-bold">Menu</h1>
-      </div>
-      {/* <div className=' bg-[url(banner.jpg)] text-center   opacity-95 bg-black tracking-widest text-white h-96 font-extrabold flex flex-col  justify-center  items-center'> 
-        <h1 className='text-4xl font- italic font-mono '>Check Out Our</h1>
-        <h1 className='xl:text-9xl lg:text-9xl md:text-9xl sm:text-9xl text-6xl pt-28 xl:pt-36 gap-4 '>M  E  N  U</h1>
-      </div> */}
+    <div >
+<div className="relative h-64 flex justify-center items-center text-center bg-black tracking-widest">
+  {/* Background Image */}
+  <img src="./banner.jpg" alt="Background" className="absolute inset-0 w-full h-full opacity-90" style={{ objectFit: 'cover', backgroundRepeat: 'repeat' }} />
+  <h1 className="relative text-white text-5xl font-bold bg-transparent"> Menu </h1>
+</div>
+
+
+
       <div className='bg-slate-50 text-slate-900 text-xl  h-fit font-extrabold flex flex-col justify-center py-10  items-center'>
         <h1 className='text-red-600'>MAIN COURSE</h1>
 
